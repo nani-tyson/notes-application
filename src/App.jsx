@@ -1,10 +1,17 @@
-import React from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
+import Signup from "./components/Signup";
+import Signin from "./components/Signin";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
-    </div>
+    <Routes>
+      {/* default redirect to signin */}
+      <Route path="/" element={<Navigate to="/signin" replace />} />
+      <Route path="/signup" element={<Signup />} />
+      <Route path="/signin" element={<Signin />} />
+      <Route path="/notes" element={<Dashboard />} />
+    </Routes>
   );
 }
 
