@@ -6,9 +6,15 @@ import cors from 'cors'
 import { connectDB } from './configs/db.js';
 dotenv.config()
 
+//routes
+import userRoutes from './routes/userRoutes.js';
+
 const app = express()
 app.use(cors())
-app.use(urlencoded({extends: true}))
+app.use(express.json())
+app.use(urlencoded({ extended: true }))
+
+app.use('/api/users', userRoutes)
 
 
 const PORT = process.env.PORT | 3000
