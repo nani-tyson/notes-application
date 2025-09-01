@@ -1,18 +1,17 @@
 # Notes Taking Application
 
-This repository contains a full-stack Notes Taking Application with separate **backend** and **frontend** folders.  
+This repository contains a full-stack Notes Taking Application with separate **backend** and **frontend** folders.
 
 ---
 
 ## Project Structure
 
+```
 notes-taking-application/
-├── backend/ # Node.js + Express backend
-├── frontend/ # React + Vite frontend
+├── backend/          # Node.js + Express backend
+├── frontend/         # React + Vite frontend
 └── README.md
-
-yaml
-Copy code
+```
 
 ---
 
@@ -21,81 +20,86 @@ Copy code
 ### 1. Navigate to backend folder
 ```bash
 cd backend
-2. Install dependencies
-bash
-Copy code
-npm install
-3. Create .env file
-Create a .env file in backend/ folder with the following content:
+```
 
-env
-Copy code
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Create .env file
+Create a `.env` file in `backend/` folder with the following content:
+
+```env
 PORT=3000
 MONGODB_URI=<your_mongodb_connection_string>
 JWT_SECRET=your_jwt_secret_key
 EMAIL_USER=<your_email>
 EMAIL_PASS=<your_email_password>
-4. Run the backend
-bash
-Copy code
+```
+
+### 4. Run the backend
+```bash
 npm start
+```
+
 The backend server will run at:
-
-arduino
-Copy code
+```
 http://localhost:3000
-Frontend Setup
-1. Navigate to frontend folder
-bash
-Copy code
+```
+
+---
+
+## Frontend Setup
+
+### 1. Navigate to frontend folder
+```bash
 cd frontend
-2. Install dependencies
-bash
-Copy code
+```
+
+### 2. Install dependencies
+```bash
 npm install
-3. Create .env file
-Create a .env file in frontend/ folder with the following content:
+```
 
-env
-Copy code
+### 3. Create .env file
+Create a `.env` file in `frontend/` folder with the following content:
+
+```env
 VITE_API_BASE_URL=http://localhost:3000/api
-4. Run the frontend
-bash
-Copy code
+```
+
+### 4. Run the frontend
+```bash
 npm run dev
+```
+
 The frontend will run at:
-
-arduino
-Copy code
+```
 http://localhost:5173
-The port may vary depending on Vite’s default settings.
+```
 
-Usage
-Start the backend server first.
+The port may vary depending on Vite's default settings.
 
-Then start the frontend server.
+---
 
-Open the frontend URL in your browser.
+## Usage
 
-You can now register, login, and manage your notes.
+1. Start the backend server first.
+2. Then start the frontend server.
+3. Open the frontend URL in your browser.
+4. You can now register, login, and manage your notes.
 
-Environment Variables Summary
-Backend
-PORT — port number for backend server
+---
 
-MONGODB_URI — MongoDB connection string
+## Environment Variables Summary
 
-JWT_SECRET — secret key for JWT authentication
+### Backend
+- **PORT** — port number for backend server
+- **MONGODB_URI** — MongoDB connection string
+- **JWT_SECRET** — secret key for JWT authentication
+- **EMAIL_USER** — email for sending notifications
+- **EMAIL_PASS** — password for the email account
 
-EMAIL_USER — email for sending notifications
-
-EMAIL_PASS — password for the email account
-
-Frontend
-VITE_API_BASE_URL — base URL for backend API endpoints
-
-
-
-
-
-Ask ChatGPT
+### Frontend
+- **VITE_API_BASE_URL** — base URL for backend API endpoints
